@@ -1,0 +1,334 @@
+
+    :root{--ink:#202b35;--muted:#66747e;--line:#dfe5e3;--accent:#527c80;--paper:#fbfaf7;--wash:#edf2ef;--body-font:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;--display-font:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif}
+    [data-theme="ink"]{--ink:#292a2a;--muted:#686c6b;--line:#deded9;--accent:#3f6874;--paper:#f8f7f3;--wash:#eceeea}[data-theme="terracotta"]{--ink:#352923;--muted:#77655c;--line:#e5d8d0;--accent:#a65f4a;--paper:#fcf8f4;--wash:#f3e7df}[data-theme="blue"]{--ink:#263442;--muted:#647483;--line:#d8e2ea;--accent:#42759b;--paper:#f5f9fc;--wash:#e5f0f7}
+    *{box-sizing:border-box} html{-webkit-text-size-adjust:100%;text-size-adjust:100%} body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.75 var(--body-font)}
+    .shell{max-width:1280px;margin:auto;padding:28px 5vw 70px} .page>.lead{max-width:none} header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:20px}
+    .home{display:inline-flex;align-items:baseline;color:var(--ink);text-decoration:none;position:relative;top:5px}.brand-name{font:400 1rem/1 "Bradley Hand","Segoe Print","Comic Sans MS",cursive;letter-spacing:-.02em;color:var(--accent);margin-left:7px;white-space:nowrap;transition:color 160ms ease-out}.home:hover .brand-name,.home:focus-visible .brand-name{color:var(--ink)}.signature{font:italic 400 2rem/1.1 "Snell Roundhand","Segoe Script","Bradley Hand",cursive;letter-spacing:-.08em;color:var(--accent);transform:rotate(-7deg);display:inline-block}
+    nav{display:flex;align-items:center;gap:25px}nav a,.dropbtn{color:var(--ink);text-decoration:none;font-size:.94rem;background:none;border:0;font:inherit;cursor:pointer;padding:8px 0}.drop{position:relative}.dropmenu{visibility:hidden;opacity:0;transform:translateY(-5px) scale(.98);transform-origin:top right;position:absolute;right:-22px;top:40px;background:rgba(255,253,249,.98);border:1px solid var(--line);border-radius:16px;box-shadow:0 16px 35px #26332d1c;min-width:245px;padding:10px;z-index:2;transition:opacity 180ms cubic-bezier(.23,1,.32,1),transform 180ms cubic-bezier(.23,1,.32,1),visibility 180ms}.drop:not(.is-closed):hover .dropmenu,.drop.is-open .dropmenu{visibility:visible;opacity:1;transform:translateY(0) scale(1)}.dropmenu a{display:block;padding:10px 13px;border-radius:10px}.dropmenu a:hover,.dropmenu a:focus-visible{background:var(--wash);color:var(--accent)}
+    main{min-height:640px}.hero{max-width:900px;padding:145px 0 135px}.eyebrow{color:var(--accent);font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600}.hero h1{font:400 clamp(4rem,10vw,8rem)/.9 Georgia,serif;margin:24px 0 32px;letter-spacing:-.06em}.lead{font:1.25rem/1.7 Georgia,serif;max-width:700px}.side{border-left:1px solid var(--accent);padding-left:24px;color:var(--muted)}.side strong{color:var(--ink);font-weight:500}.rule{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;color:var(--muted);font-size:.92rem}.page{padding:75px 0}.page h1{font:400 clamp(3rem,7vw,5.4rem)/1 Georgia,serif;margin:18px 0 35px;letter-spacing:-.04em}.item{border-top:1px solid var(--line);padding:24px 0}.item h2{font:400 1.45rem/1.3 Georgia,serif;margin:0 0 5px}.muted{color:var(--muted);font-size:.9rem}.links a{color:var(--accent);margin-right:22px}.search{width:100%;max-width:560px;border:1px solid var(--line);background:white;border-radius:12px;padding:13px 15px;margin:0 0 28px;color:var(--ink);font:inherit}.tabs{display:inline-flex;flex-wrap:wrap;gap:4px;margin:35px 0 18px;padding:4px;background:var(--wash);border-radius:999px;max-width:100%}.tab{border:0;border-radius:999px;background:transparent;color:var(--muted);padding:10px 15px;font:inherit;cursor:pointer;transition:background 160ms ease-out,color 160ms ease-out,transform 160ms ease-out}.tab.active{background:var(--paper);color:var(--ink);box-shadow:0 2px 8px #26332d12}.tab:active{transform:scale(.97)}.tab:hover{color:var(--ink)}.panel{display:none}.panel.active{display:block}.panel.active .item{background:rgba(255,255,255,.28);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:12px 0;transition:transform 160ms ease-out,box-shadow 160ms ease-out}.panel.active .item:hover{transform:translateY(-2px);box-shadow:0 10px 24px #26332d0d}.empty{color:var(--muted);padding:25px 0}.footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.86rem}@media(max-width:720px){header{align-items:flex-start;gap:15px}.home{flex:0 0 auto;min-width:max-content}.signature{font-size:1.7rem;white-space:nowrap}.wordmark-loose .wordmark-i:after{font-size:2rem}.wordmark-loose .wordmark-i:before{top:-.05rem;font-size:.6rem}nav{gap:12px;flex-wrap:wrap;justify-content:flex-end}.hero{padding:72px 0 80px}.hero h1{font-size:3.3rem;margin-bottom:24px}.lead{font-size:1.08rem}.page{padding:48px 0}.page h1{font-size:2.8rem;margin-bottom:26px}.panel.active .item{padding:14px 15px;margin:8px 0}.panel.active .item h2{font-size:1.02rem;line-height:1.25}.panel.active .item p{font-size:.86rem;line-height:1.48}.tabs{display:flex;border-radius:16px}.tab{flex:1 1 100%;text-align:left}.dropmenu{right:0}}
+    .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:38px}.links a{color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:10px;padding:10px 15px;background:rgba(255,255,255,.32);transition:background 160ms ease-out,color 160ms ease-out,border-color 160ms ease-out,transform 160ms ease-out}.links a:active{transform:scale(.97)}.theme-picker{display:inline-flex;gap:6px;margin-left:14px}.theme-picker button{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:3px 9px;font:inherit;font-size:.78rem;cursor:pointer}.theme-picker button:hover,.theme-picker button:focus{border-color:var(--accent);color:var(--ink)}
+    @media (hover:hover) and (pointer:fine){.links a:hover,.links a:focus{background:var(--accent);border-color:var(--accent);color:white;transform:translateY(-2px)}}
+    @media (prefers-reduced-motion:reduce){.dropmenu,.links a{transition:none}.links a:hover,.links a:focus{transform:none}}
+    .hero h1,.page h1,.item h2,.modal h2{font-family:var(--display-font)}.lead{font-family:var(--display-font)}.clickable h2:after{font-family:var(--body-font)}
+    .clickable{cursor:pointer}.clickable h2:after{content:' ↗';color:var(--accent);font:1rem system-ui}.modal-backdrop{position:fixed;inset:0;background:#202b3548;display:grid;place-items:center;padding:24px;z-index:5;opacity:0;visibility:hidden;transition:opacity 180ms ease-out,visibility 180ms}.modal-backdrop.open{opacity:1;visibility:visible}.modal{width:min(720px,100%);max-height:min(760px,90vh);overflow:auto;background:var(--paper);border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 70px #202b3540;padding:32px;transform:translateY(8px) scale(.98);transition:transform 180ms cubic-bezier(.23,1,.32,1)}.modal-backdrop.open .modal{transform:translateY(0) scale(1)}.modal-close{float:right;border:0;background:var(--wash);border-radius:50%;width:34px;height:34px;font-size:1.2rem;cursor:pointer}.modal h2{font:400 clamp(2rem,5vw,3.2rem)/1.05 Georgia,serif;margin:16px 42px 28px 0}.detail{border-top:1px solid var(--line);padding:14px 0}.detail strong{display:block;color:var(--accent);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.detail p{margin:4px 0}.modal a{color:var(--accent)}
+    h1,h2{font-family:var(--display-font)}.lead{font-family:var(--display-font)}.tabs{display:flex;flex-wrap:wrap;gap:10px;background:transparent;border-radius:0;padding:0}.tab{border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.32);color:var(--muted);transition:background 160ms ease-out,color 160ms ease-out,border-color 160ms ease-out,transform 160ms ease-out}.tab.active{background:var(--accent);border-color:var(--accent);color:white}.tab:hover{border-color:var(--accent)}
+    .wordmark-loose .signature{font-family:"Bradley Hand","Segoe Print",cursive;transform:rotate(-4deg);letter-spacing:-.04em}.wordmark-loose .wordmark-i{font-size:0;position:relative}.wordmark-loose .wordmark-i:after{content:'ı';font-size:2.35rem}.wordmark-loose .wordmark-i:before{content:'♥';position:absolute;left:50%;top:-.2em;transform:translateX(-50%) rotate(-8deg);color:var(--accent);font:400 .38em/1 var(--body-font)}.wordmark-formal .signature{font-family:"Kunstler Script","Snell Roundhand",cursive;transform:rotate(-8deg);letter-spacing:-.1em}.wordmark-quiet .signature{font-family:"Baskerville","Iowan Old Style",serif;font-style:italic;transform:rotate(-3deg);letter-spacing:-.06em}
+    .wordmark-loose .wordmark-i{display:inline-block;position:relative}.wordmark-loose .wordmark-i:before{content:'♥';position:absolute;left:76%;top:-.31rem;transform:translateX(-50%) rotate(4deg);color:var(--accent);font:400 .75rem/1 var(--body-font);z-index:2}.wordmark-round .signature{font-family:"Segoe Print","Bradley Hand",cursive;transform:rotate(-3deg);letter-spacing:-.05em}.wordmark-air .signature{font-family:"Chalkboard SE","Bradley Hand",cursive;font-weight:300;transform:rotate(-5deg);letter-spacing:.01em}.wordmark-italic .signature{font-family:"Baskerville","Iowan Old Style",serif;font-style:italic;transform:rotate(-3deg);letter-spacing:-.06em}
+    .wordmark-loose .wordmark-i:before{left:78%;top:-.08rem;font-size:.68rem;transform:translateX(-50%) rotate(8deg)}
+    /* Static visual direction: interaction changes colour or visibility only. */
+    .dropmenu,.tab,.links a,.panel.active .item,.modal-backdrop,.modal{transition:none!important}
+    .dropmenu,.panel.active .item:hover,.modal-backdrop.open .modal{transform:none!important}
+    .tab:active,.links a:active,.links a:hover,.links a:focus,.panel.active .item:hover{transform:none!important}
+    nav{gap:18px}@media(max-width:720px){nav{gap:17px}}
+    .hero{padding-bottom:72px}@media(max-width:720px){.hero{padding-bottom:44px}}
+    main:has(.hero){min-height:0}
+    .hero h1{margin:0;padding:120px 0 110px}@media(max-width:720px){.hero h1{padding:84px 0 76px}}
+    .hero{position:relative;isolation:isolate;padding:105px 0 72px;max-width:900px;min-height:0;display:block;background:none;border-radius:0}.hero:before{display:none}.hero>div{max-width:720px;position:relative;z-index:1}.hero h1{padding:120px 0 110px}.hero .lead{max-width:610px}.hero .links{margin-top:42px}
+    @media(max-width:720px){.hero{padding:64px 0 44px}.hero h1{padding:84px 0 76px}.hero .links{margin-top:34px}}
+    .hero .links a,.page .links a{border:0;border-bottom:1px solid transparent;border-radius:0;background:transparent;padding:4px 0;color:var(--ink);transform:none}
+    .hero .links a:hover,.hero .links a:focus,.page .links a:hover,.page .links a:focus{background:transparent;border-bottom-color:var(--accent);color:var(--accent);transform:none}
+    .hero .links a,.page .links a{border-bottom-color:var(--line)}
+    .hero .links a:hover,.hero .links a:focus,.page .links a:hover,.page .links a:focus{border-bottom-color:var(--accent)}
+    .hero h1{margin-top:36px;margin-bottom:44px}
+    /* Keep the original quiet composition while bringing the introduction slightly higher into view. */
+    .hero{padding-top:72px;padding-bottom:48px}
+    .hero h1{padding-top:82px;padding-bottom:72px}
+    @media(max-width:720px){.hero{padding-top:52px;padding-bottom:36px}.hero h1{padding-top:64px;padding-bottom:58px}}
+    .panel[data-panel="all"]{margin-top:0;padding-top:0}.panel[data-panel="all"].active .item:first-child{margin-top:0}
+    .panel.active .item h2{font-size:1.22rem;line-height:1.28}
+    .modal h2{font-size:clamp(1.55rem,3.5vw,2.25rem);line-height:1.12}
+    #modalBody{display:flex;flex-direction:column}#modalBody .summary-detail{order:-1}
+    #modalBody .source-note{display:none}#modalType{display:none}
+    .filterbar{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;margin:28px 0 24px}.filter-menu{position:relative}.filter-menu summary{list-style:none;cursor:pointer;border:1px solid var(--line);border-radius:12px;padding:11px 14px;background:var(--paper);color:var(--ink);font-size:.92rem}.filter-menu summary::-webkit-details-marker{display:none}.filter-menu[open] summary{border-color:var(--accent);box-shadow:0 0 0 3px rgba(109,137,116,.12)}.filter-options{position:absolute;z-index:4;top:calc(100% + 8px);left:0;min-width:240px;padding:12px;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 30px rgba(38,51,45,.12)}.filter-options label{display:flex;gap:9px;align-items:flex-start;padding:8px 6px;color:var(--ink);font-size:.9rem;line-height:1.35}.filter-options input{accent-color:var(--accent);margin-top:3px}.filter-reset{border:0;background:transparent;color:var(--muted);padding:11px 4px;font:inherit;cursor:pointer}.filter-reset:hover{color:var(--accent)}.filter-count{margin:0 0 18px;color:var(--muted);font-size:.86rem}.filter-empty{display:none;color:var(--muted);padding:25px 0}.footer{display:flex;justify-content:flex-end;gap:18px;align-items:center;text-align:right;font-size:.78rem}.footer a{color:var(--muted);text-decoration:none}.footer a:hover,.footer a:focus{color:var(--ink)}@media(max-width:720px){.filterbar{gap:8px}.filter-menu summary{font-size:.84rem;padding:9px 11px}.filter-options{position:fixed;left:16px;right:16px;top:auto;bottom:16px;min-width:0}.footer{justify-content:flex-start;flex-wrap:wrap;text-align:left;gap:10px}
+    }
+    .project-group-label{font:500 1.05rem/1.3 Georgia,serif;margin:34px 0 10px;color:var(--accent);letter-spacing:.01em}.project-group-label:first-child{margin-top:8px}
+    .research-overview .item:first-child .eyebrow{margin-top:-18px}
+    .research-overview .item>p{font:inherit;line-height:1.7;max-width:none}
+    body,body *{font-family:var(--body-font)!important}
+    .hero h1,.page h1{font-family:var(--display-font)!important}
+    :root{--body-font:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;--display-font:var(--body-font)}
+    nav,.eyebrow,.muted,.filterbar,.filter-count,.filter-empty,.footer,.dropmenu,.tab,.search,.filter-options{font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif!important}
+    /* Final landing-page calibration: preserve the original composition, reduce only excess vertical air. */
+    .hero{padding-top:72px;padding-bottom:48px}
+    .hero h1{padding-top:82px;padding-bottom:72px}
+    @media(max-width:720px){.hero{padding-top:52px;padding-bottom:36px}.hero h1{padding-top:64px;padding-bottom:58px}}
+    /* Homepage cover: text-led left column with a quiet zine image on the right. */
+    .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,310px);gap:clamp(42px,8vw,108px);align-items:center;min-height:560px;padding:78px 0 70px;background:transparent}
+    .hero:before{display:none}
+    .hero>div{max-width:650px;align-self:end}
+    .hero h1{padding:28px 0 34px;margin:0}
+    /* Plain-text homepage: remove the former image column and keep the copy flush with the content area. */
+    .hero{display:block;grid-template-columns:none;gap:0;min-height:0}
+    .hero>div{max-width:720px;margin:0;padding:0}
+    .hero:before{display:none}
+    .hero .eyebrow{display:flex;align-items:center;gap:12px}
+    .hero h1{max-width:680px;margin-top:28px;margin-bottom:34px;letter-spacing:-.075em}
+    .hero .lead{max-width:600px}
+    .hero .links{margin-top:34px}
+    @media(max-width:720px){.hero h1{margin-top:22px;margin-bottom:28px}}
+    /* Lift the homepage introduction slightly on both desktop and phone layouts. */
+    .hero{padding-top:54px}
+    @media(max-width:720px){.hero{padding-top:8px!important}}
+    @media(max-width:720px){.hero h1{font-size:2.65rem!important}.page h1{font-size:2.05rem!important}}
+    @media(max-width:720px){.publications-page .panel.active .item h2,.projects-page .panel.active .item h2{font-size:.96rem!important;line-height:1.28}.publications-page .panel.active .item p,.projects-page .panel.active .item p{font-size:.78rem!important;line-height:1.4}}
+    @media(max-width:720px){body:has(.hero) header{border-bottom:1px solid var(--line)}.hero{padding-bottom:72px!important}.hero .links a{border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;padding-left:0;padding-right:0}body:has(.hero) .footer{border-top:0}}
+    /* Editorial micro-interactions: a short hover rule in menus and a quiet title reveal on page entry. */
+    .dropmenu a{position:relative;background:transparent!important}
+    .dropmenu a:after{content:"";position:absolute;left:13px;right:13px;bottom:6px;width:auto;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left center;transition:transform 180ms ease-out}
+    .dropmenu a:hover:after,.dropmenu a:focus-visible:after{transform:scaleX(1)}
+    nav a:hover,nav a:focus-visible,.dropbtn:hover,.dropbtn:focus-visible{color:var(--accent)!important}
+    .hero h1{animation:eyebrow-drop 1250ms cubic-bezier(.22,.8,.28,1) both}
+    .page h1{animation:none}
+    .page>.eyebrow{animation:eyebrow-drop 1250ms cubic-bezier(.22,.8,.28,1) both}
+    @keyframes title-open-hero{from{opacity:.35;letter-spacing:-.11em;transform:translateY(4px)}to{opacity:1;letter-spacing:-.075em;transform:translateY(0)}}
+    @keyframes title-open-page{from{opacity:.35;letter-spacing:-.075em;transform:translateY(4px)}to{opacity:1;letter-spacing:-.04em;transform:translateY(0)}}
+    @keyframes eyebrow-drop{from{opacity:.2;transform:translateY(-18px)}to{opacity:1;transform:translateY(0)}}
+    @media(prefers-reduced-motion:reduce){.dropmenu a:after{transition:none}.hero h1,.page h1,.page>.eyebrow{animation:none}}
+    /* Stable homepage background artwork: anchored to the lower-right rather than laid out as a separate object. */
+    /* Link colour system: use the site's teal accent consistently across all text links. */
+    nav a,.dropbtn,.hero .links a,.page .links a,.item a,.modal a,.footer a{color:var(--accent)}
+    nav a:hover,nav a:focus,.dropbtn:hover,.dropbtn:focus,.hero .links a:hover,.hero .links a:focus,.page .links a:hover,.page .links a:focus,.item a:hover,.item a:focus,.modal a:hover,.modal a:focus,.footer a:hover,.footer a:focus{color:var(--ink)}
+    .home{color:var(--accent)}
+    /* Final navigation calibration: all top-level items use the same teal hover state. */
+    header nav>a:hover,header nav>a:focus-visible,header nav .dropbtn:hover,header nav .dropbtn:focus-visible{color:var(--accent)!important}
+    header nav>a,header nav .dropbtn{position:relative;z-index:3}
+    header nav>a:after,header nav .dropbtn:after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left center;transition:transform 180ms ease-out}
+    header nav>a:hover:after,header nav>a:focus-visible:after,header nav .dropbtn:hover:after,header nav .dropbtn:focus-visible:after{transform:scaleX(1)}
+    .dropmenu a{font-weight:400!important}
+    .dropmenu a:after{height:.5px!important;transform:scaleY(.75) scaleX(0);transform-origin:left center}
+    .dropmenu a:hover:after,.dropmenu a:focus-visible:after{transform:scaleY(.75) scaleX(1)}
+    .hero:before{content:none!important;background:none!important}
+    .hero:before,.hero:after{display:none!important;content:none!important;background-image:none!important}
+    nav a,.dropbtn{font-size:1rem!important}
+    @media(max-width:720px){body:has(.hero) header,body:not(:has(.hero)) header{display:flex}html.mobile-preview body:has(.hero) header .home,html.mobile-preview body:not(:has(.hero)) header .home,html.narrow-preview body:has(.hero) header .home,html.narrow-preview body:not(:has(.hero)) header .home{display:none}body:has(.hero) header nav,body:not(:has(.hero)) header nav{display:flex;width:100%;flex-wrap:wrap;justify-content:flex-end;column-gap:10px;row-gap:4px;margin:0}}
+    .mobile-nav-break{display:none}@media(max-width:720px){.mobile-nav-break{display:block;flex-basis:100%;height:0}}
+    @media(max-width:720px){.hero>div{display:flex;flex-direction:column;align-items:flex-start}.hero h1{transform:none;margin-top:27px}.hero .lead:first-of-type{transform:none;margin-top:5px}.hero .role-note{transform:none;margin-top:9px}}
+    @media(max-width:720px){.footer{transform:none;padding-top:21px}}
+    html,body{overflow-x:hidden}
+    /* Quiet colour blocks for the thematic overview pages, inspired by editorial issue layouts. */
+    .research-overview{display:grid;gap:14px;margin-top:34px}
+    .research-overview .item{margin:0;border:0;border-radius:0;padding:28px 30px;background:rgba(237,242,239,.72)}
+    .research-overview .item:nth-child(2){background:rgba(255,255,255,.54)}
+    .research-overview .item:nth-child(3){background:rgba(232,240,237,.62)}
+    .research-overview .item h2{margin-bottom:10px}
+    .research-overview .item h3{margin:20px 0 4px;color:var(--muted);font:600 .78rem/1.35 "Avenir Next","Segoe UI",sans-serif;letter-spacing:.06em;text-transform:uppercase}
+    .research-overview .item p:last-child{margin-bottom:0}
+    .page>.tabs + .panel.active{display:grid;gap:14px;margin-top:28px}
+    .page>.tabs + .panel.active .item{margin:0;border:0;border-radius:0;padding:26px 30px;background:rgba(237,242,239,.68)}
+    .page>.tabs + .panel.active .item:nth-child(even){background:rgba(255,255,255,.54)}
+    .about-page{display:grid;gap:14px}
+    .about-page>.eyebrow,.about-page>h1,.about-page>.lead{margin-left:0;margin-right:0}
+    .about-page>.item{margin:0;border:0;border-radius:0;padding:28px 30px;background:rgba(237,242,239,.72)}
+    .about-page>.item:nth-of-type(2){background:rgba(255,255,255,.54)}
+    .about-page>.item h2{margin-bottom:10px}
+    .about-page>.item p:last-child{margin-bottom:0}
+    .teaching-blocks{display:grid;gap:14px;margin-top:18px}
+    .teaching-blocks .item{margin:0;border:0;border-radius:0;padding:28px 30px;background:var(--panel-green)}
+    /* Colour rule: Teaching is the slightly deeper green; Supervision, the second Research overview block, and the second Engagement block share this lighter green. */
+    :root{--panel-green:#edf2efb8;--panel-green-soft:#edf2ef80}
+    .teaching-blocks .item:nth-child(2),.research-overview .item:nth-child(2){background:var(--panel-green-soft)}
+    .about-page>.item{background:var(--panel-green)}
+    .about-page>.item:nth-of-type(2){background:var(--panel-green-soft)}
+    .teaching-blocks .item h2{margin-bottom:10px}
+    .teaching-blocks .item p:last-child{margin-bottom:0}
+    @media(max-width:720px){.research-overview .item,.page>.tabs + .panel.active .item{padding:22px 20px}}
+    @media(min-width:721px){.dropmenu{left:0;right:auto}}
+    header nav>a:after,header nav .dropbtn:after{display:none!important}
+    @media(min-width:721px){.dropmenu{background:rgba(255,253,249,.96)!important}.drop:hover .dropmenu,.drop:focus-within .dropmenu{transform:translateY(0) scale(1)!important}}
+    header nav>a:hover,header nav>a:focus-visible,header nav .dropbtn:hover,header nav .dropbtn:focus-visible{color:var(--accent)!important;opacity:1!important}
+    header nav>a,header nav .dropbtn{color:var(--accent)!important}
+    header nav>a:hover,header nav>a:focus-visible,header nav .dropbtn:hover,header nav .dropbtn:focus-visible{color:var(--ink)!important}
+    header nav{position:relative;top:5px}
+    .research-overview .item,.about-page>.item,.teaching-blocks .item,.page>.tabs + .panel.active .item{border-radius:16px!important}
+    .search,.search::placeholder{font-family:var(--body-font)!important}
+    body:has(.hero) .footer{border-top:0}
+    .book-meta p.book-question b{display:block;margin-bottom:4px}
+    .project-group-label .group-sub{display:inline-block;margin-left:1.2em;font-size:.78em;font-style:italic;color:var(--muted);font-weight:400;letter-spacing:.01em}
+    /* Keep the footer quiet on every page. */
+    .footer{border-top:0!important}
+    .footer{padding-bottom:2px}
+    .accessibility-page .item,.privacy-page .item{border-top:0!important}
+    /* Keep Research menu anchored to its trigger at every viewport width. */
+    .dropmenu{left:0!important;right:auto!important;transform-origin:top left!important}
+    /* Keep the Research flyout compact while preserving readable tap targets. */
+    .dropmenu{min-width:0!important;padding:8px!important}
+    .dropmenu a{padding:8px 10px!important}
+    @media(min-width:721px){.dropmenu{width:180px!important;min-width:180px!important}}
+    @media(max-width:720px){.dropmenu{position:absolute!important;inset-inline-start:auto!important;inset-inline-end:0!important;left:auto!important;right:0!important;width:150px!important;min-width:150px!important;max-width:calc(100vw - 24px)!important;transform-origin:top right!important}.dropmenu a{padding-left:8px!important;padding-right:8px!important}}
+    header nav a:focus-visible,header nav .dropbtn:focus-visible,.dropmenu a:focus-visible{outline:2px solid rgba(255,255,255,.92);outline-offset:3px;border-radius:4px}
+    @media(max-width:380px){header nav{column-gap:8px;row-gap:3px}.dropmenu{width:146px!important;min-width:146px!important}}
+    /* Keep homepage and inner-page hover states distinct and visible. */
+    body:has(.hero) header nav>a:hover,body:has(.hero) header nav>a:focus-visible,body:has(.hero) header nav .dropbtn:hover,body:has(.hero) header nav .dropbtn:focus-visible{color:var(--ink)!important}
+    body:not(:has(.hero)) header nav>a:hover,body:not(:has(.hero)) header nav>a:focus,body:not(:has(.hero)) header nav>a:active,body:not(:has(.hero)) header nav .dropbtn:hover,body:not(:has(.hero)) header nav .dropbtn:focus,body:not(:has(.hero)) header nav .dropbtn:active,body:not(:has(.hero)) .dropmenu a:hover,body:not(:has(.hero)) .dropmenu a:focus,body:not(:has(.hero)) .dropmenu a:active{color:#527c80!important}
+    .dropmenu a:hover,.dropmenu a:focus,.dropmenu a:active{color:var(--accent)!important}
+    @media (hover:none) and (pointer:coarse){body:not(:has(.hero)) header nav>a:focus,body:not(:has(.hero)) header nav>a:active,body:not(:has(.hero)) header .dropbtn:focus,body:not(:has(.hero)) header .dropbtn:active,body:not(:has(.hero)) .dropmenu a:focus,body:not(:has(.hero)) .dropmenu a:active{color:#527c80!important}}
+    .hero .links{transform:translateY(5px)}
+    @media(max-width:720px){.hero{padding-bottom:92px!important}}
+    /* Keep catalogue filter options attached to their own control. */
+    .filter-menu{position:relative!important}
+    .filter-options{position:absolute!important;top:calc(100% + 8px)!important;left:0!important;right:auto!important;bottom:auto!important;z-index:20!important}
+    @media(max-width:720px){.filter-options{min-width:min(240px,calc(100vw - 32px))!important;max-width:calc(100vw - 32px)!important}}
+    .books-list{display:grid;gap:14px;margin-top:30px}.books-list .item{margin:0;border:0;border-radius:16px;padding:28px 30px;background:rgba(237,242,239,.72)}.books-list .item:nth-child(2){background:rgba(255,255,255,.54)}.books-list .item h2{margin:0 0 8px}.books-list .item p{margin-bottom:0}@media(max-width:720px){.books-list .item{padding:22px 20px}.books-list .item h2{font-size:1.15rem}}
+    .book-detail{display:grid;grid-template-columns:150px 1fr;gap:26px;align-items:start}.book-cover{aspect-ratio:2/3;overflow:hidden;background:var(--wash) url("/assets/img/book_covers/handbook-meta-research.jpg") center/cover no-repeat;box-shadow:0 10px 22px #26332d18;color:transparent!important}.book-cover.alt{background-image:url("/assets/img/book_covers/changing-higher-education-east-asia.jpg")}.book-cover strong,.book-cover small{display:none}.book-meta{font-size:1rem;line-height:1.62}.book-meta strong{color:var(--accent);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}.book-meta p{margin:4px 0 14px}.book-meta p.reader-question b{display:block;margin-bottom:4px}.book-meta a{color:var(--accent)}@media(max-width:720px){.book-detail{grid-template-columns:110px 1fr;gap:18px}.book-meta{font-size:.84rem}.book-meta p{margin-bottom:9px}}
+    .research-books{display:none!important}
+    .brand-name{display:block;width:78px;height:auto;margin-left:0;position:relative;top:4px;object-fit:contain;transition:filter 160ms ease-out!important}.home:hover .brand-name,.home:focus-visible .brand-name{filter:saturate(.82) brightness(.82)!important}
+    .hero .links{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;gap:14px;align-items:center}.hero .links a{position:relative;display:inline-flex;flex:0 0 auto;align-items:center;margin:0;padding:12px 18px;border:0;color:var(--accent);font:400 1rem/1.2 var(--body-font);letter-spacing:.02em;text-decoration:none;transition:color .2s ease,transform .2s ease}.hero .links a:before{content:"";position:absolute;inset:0 auto auto 0;width:100%;height:45px;border-radius:50px;background:color-mix(in srgb,#eadfce 35%,var(--paper));transform:scaleX(.45);transform-origin:left center;transition:transform .3s ease,background .3s ease;z-index:-1}.hero .links a:after{content:none}.hero .links a:hover,.hero .links a:focus-visible{border:0;color:color-mix(in srgb,var(--accent) 70%,var(--ink));transform:none}.hero .links a:hover:before,.hero .links a:focus-visible:before{transform:scaleX(1);background:color-mix(in srgb,#eadfce 35%,var(--paper))}.hero .links a:active{transform:scale(.95)}@media(max-width:520px){.hero .links{align-items:flex-start;flex-direction:column!important;gap:8px}.hero .links a{font-size:.92rem}}
+    /* Temporary landscape placeholder for the homepage hero. */
+    .hero{position:relative;isolation:isolate;min-height:650px;max-width:none;margin:0 -5vw;padding:78px 5vw 72px;display:flex;align-items:flex-end;overflow:hidden;background:linear-gradient(180deg,#9aa9b4 0%,#c7c9c4 48%,#8d9a91 49%,#596c61 70%,#263b35 100%)}.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 78% 22%,rgba(255,250,232,.7),transparent 21%),linear-gradient(158deg,transparent 0 46%,rgba(91,112,108,.62) 47% 55%,transparent 56%),linear-gradient(27deg,transparent 0 52%,rgba(55,78,72,.85) 53% 70%,transparent 71%),linear-gradient(165deg,transparent 0 64%,rgba(32,55,49,.96) 65%)}.hero>div{position:relative;z-index:1;max-width:720px}.hero h1,.hero .lead,.hero .role-note{color:#fff}.hero h1{max-width:760px;text-shadow:0 2px 18px rgba(25,39,38,.22)}.hero .lead{max-width:620px;text-shadow:0 1px 10px rgba(25,39,38,.18)}.hero .links{margin-top:34px}.hero .links a{color:#fff}.hero .links a:hover,.hero .links a:focus-visible{color:#fff}.hero .links a:before{background:rgba(250,239,216,.78)}.hero .links a:hover:before,.hero .links a:focus-visible:before{background:rgba(250,239,216,.78)}@media(max-width:720px){.hero{min-height:650px;margin:0 -5vw;padding:52px 5vw 52px}.hero .links{margin-top:28px}}
+    .hero{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);min-height:calc(100vh - 118px);background-size:cover;background-position:center}.hero:before{background-size:cover;background-position:center}.hero>div{width:min(100%,720px)}@media(max-width:720px){.hero{min-height:calc(100svh - 112px)}}
+
+    .hero:before{background:linear-gradient(90deg,rgba(13,39,34,.34),transparent 72%)!important}.hero h1{text-shadow:0 2px 18px rgba(25,39,38,.28)}.hero .lead{text-shadow:0 1px 10px rgba(25,39,38,.24)}
+    .hero>div{width:min(66.666vw,760px);max-width:66.666vw}.hero h1,.hero .lead{max-width:100%}@media(max-width:720px){.hero>div{width:100%;max-width:100%}}
+    .hero h1{font-size:clamp(3.2rem,7.5vw,6.2rem)}@media(min-width:721px){.hero>div{width:min(61.8vw,710px);max-width:61.8vw}.hero .lead{font-size:1.08rem;line-height:1.62}}
+    .hero h1 .name-accent{color:#fff!important;font-style:italic}
+    body:not(:has(.hero)) header{width:100vw;margin-top:-28px;margin-left:calc(50% - 50vw);margin-bottom:0;min-height:0;align-items:flex-start;padding:28px 5vw 20px;border-bottom-color:rgba(255,255,255,.72)!important}body:not(:has(.hero)) header:after{display:none}body:not(:has(.hero)) header nav>a,body:not(:has(.hero)) header .dropbtn{color:rgba(255,255,255,.92)!important}body:not(:has(.hero)) header nav>a:hover,body:not(:has(.hero)) header nav>a:focus-visible,body:not(:has(.hero)) header .dropbtn:hover,body:not(:has(.hero)) header .dropbtn:focus-visible{color:#fff!important}body:not(:has(.hero)) header .home{filter:brightness(0) invert(1)}
+    body:has(.hero) header .home,body:not(:has(.hero)) header .home{position:absolute;left:5vw;top:34px;margin:0;transform:none}body:has(.hero) header .brand-name,body:not(:has(.hero)) header .brand-name{top:4px;transform:none}body:has(.hero) header nav,body:not(:has(.hero)) header nav{margin-left:auto}
+    .page h1{font-size:clamp(2.25rem,5vw,3.8rem)}@media(max-width:720px){.page h1{font-size:1.75rem}}
+    body:has(.hero) .footer,body:has(.hero) .footer>a[href="/accessibility/"],body:has(.hero) .footer>a[href="/privacy/"]{color:#f3eee4!important}body:has(.hero) .footer>a[href="/accessibility/"]:hover,body:has(.hero) .footer>a[href="/accessibility/"]:focus-visible,body:has(.hero) .footer>a[href="/privacy/"]:hover,body:has(.hero) .footer>a[href="/privacy/"]:focus-visible{color:rgba(243,238,228,.68)!important}
+    /* Inner-page navigation hover must win over the photographic header defaults. */
+    body:not(:has(.hero)) header nav>a:hover,body:not(:has(.hero)) header nav>a:focus,body:not(:has(.hero)) header nav>a:active,body:not(:has(.hero)) header .dropbtn:hover,body:not(:has(.hero)) header .dropbtn:focus,body:not(:has(.hero)) header .dropbtn:active{color:#527c80!important}
+    body:not(:has(.hero)) header nav>a:focus:not(:focus-visible),body:not(:has(.hero)) header .dropbtn:focus:not(:focus-visible){color:rgba(255,255,255,.92)!important}
+    /* Final navigation system: one predictable geometry for desktop and mobile. */
+    .dropmenu{transition:opacity 300ms cubic-bezier(.23,1,.32,1),transform 300ms cubic-bezier(.23,1,.32,1),visibility 300ms!important}
+    .drop{z-index:30!important}.dropmenu{z-index:31!important;pointer-events:auto}
+    @media(min-width:721px){header nav{gap:18px}.dropmenu{width:180px!important;min-width:180px!important;left:0!important;right:auto!important;transform-origin:top left!important}}
+    @media(max-width:720px){header nav{column-gap:10px!important;row-gap:4px!important}.dropmenu{width:150px!important;min-width:150px!important;left:auto!important;right:0!important;transform-origin:top right!important}}
+    @media(max-width:720px) and (orientation:landscape){.hero{min-height:calc(100svh - 96px);padding-top:28px!important;padding-bottom:48px!important}.hero h1{margin-top:12px}}
+    @media(max-width:380px){.shell{padding-top:12px}header{padding-bottom:8px}.hero{margin-top:-36px!important;padding:0 4vw 48px!important}.hero h1{font-size:2.45rem!important;margin:0!important;padding:8px 0 24px!important}.hero .lead{font-size:1rem;line-height:1.58}.hero .role-note{font-size:.92rem}}
+    html.narrow-preview body{background:var(--paper)!important}html.narrow-preview .shell{padding-top:12px;padding-bottom:20px!important}html.narrow-preview header{padding-bottom:8px}html.narrow-preview .hero{display:block!important;align-items:initial!important;min-height:360px!important;margin-top:68px!important;padding:0 4vw 48px!important;background:transparent!important}html.narrow-preview .hero h1{font-size:2.45rem!important;margin:0!important;padding:8px 0 24px!important}html.narrow-preview .hero .lead{font-size:1rem;line-height:1.58}html.narrow-preview .hero .role-note{font-size:.92rem}html.narrow-preview .footer{margin-top:60px!important}
+    @media(max-width:720px){html:not(.narrow-preview) body:has(.hero) .hero h1{margin-top:27px!important;padding-top:84px!important}}html:not(.mobile-preview):not(.narrow-preview) body:has(.hero) .hero>div{width:min(61.8vw,710px)!important;max-width:61.8vw!important}html:not(.mobile-preview):not(.narrow-preview) header .home,html.ipad-landscape header .home{display:inline-flex!important;z-index:4!important;pointer-events:auto!important}@media(max-width:720px){html:not(.mobile-preview):not(.narrow-preview) header nav{display:flex!important;width:auto!important;max-width:calc(100% - 90px)!important;flex:1 1 auto!important;margin-left:auto!important;position:relative!important;top:5px;justify-content:flex-end;flex-wrap:wrap!important;column-gap:8px!important;row-gap:2px!important}html:not(.mobile-preview):not(.narrow-preview) header nav>a,html:not(.mobile-preview):not(.narrow-preview) header nav .dropbtn{font-size:.82rem!important}}html:not(.mobile-preview):not(.narrow-preview) body:has(.hero) .hero{align-items:flex-end!important;padding-bottom:200px!important}html:not(.mobile-preview):not(.narrow-preview) body:has(.hero) .hero h1{font-size:clamp(3.2rem,6vw,5.2rem)!important}html:not(.mobile-preview):not(.narrow-preview) body:has(.hero) .hero .lead{font-size:1.2rem!important;line-height:1.56!important}body:has(.hero) .hero h1,body:has(.hero) .hero .lead,body:has(.hero) .hero .role-note{color:var(--ink)!important;text-shadow:none!important}body:has(.hero) .hero h1 .name-accent{color:var(--ink)!important}body:has(.hero) .footer,body:has(.hero) .footer>a[href="/accessibility/"],body:has(.hero) .footer>a[href="/privacy/"]{color:var(--ink)!important}body:has(.hero) .footer>a[href="/accessibility/"]:hover,body:has(.hero) .footer>a[href="/privacy/"]:hover{color:var(--accent)!important}body:not(:has(.hero)) header{background:var(--paper)!important;border-bottom-color:var(--line)!important}body:not(:has(.hero)) header nav>a,body:not(:has(.hero)) header .dropbtn,body:not(:has(.hero)) .dropmenu a{color:var(--ink)!important}body:not(:has(.hero)) header nav>a:hover,body:not(:has(.hero)) header nav>a:focus-visible,body:not(:has(.hero)) header .dropbtn:hover,body:not(:has(.hero)) header .dropbtn:focus-visible,body:not(:has(.hero)) .dropmenu a:hover,body:not(:has(.hero)) .dropmenu a:focus-visible{color:var(--accent)!important}body:not(:has(.hero)) header .home{filter:none!important}html.ipad-landscape .hero .role-note{transform:translateY(5px)!important}
+    body:not(:has(.hero)) header nav>a:focus:not(:focus-visible),body:not(:has(.hero)) header .dropbtn:focus:not(:focus-visible),body:not(:has(.hero)) .dropmenu a:focus:not(:focus-visible){color:var(--ink)!important}
+
+    body:has(.hero) .hero>div{background:rgba(251,250,247,.50)!important;padding:20px 24px 22px!important;border-radius:18px!important;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+    body:has(.hero) .footer,body:has(.hero) .footer a,body:has(.hero) .footer span,body:has(.hero) .footer>a[href="/accessibility/"],body:has(.hero) .footer>a[href="/privacy/"]{color:#f3eee4!important}body:has(.hero) .footer a:hover,body:has(.hero) .footer a:focus-visible,body:has(.hero) .footer>a[href="/accessibility/"]:hover,body:has(.hero) .footer>a[href="/accessibility/"]:focus-visible,body:has(.hero) .footer>a[href="/privacy/"]:hover,body:has(.hero) .footer>a[href="/privacy/"]:focus-visible{color:rgba(243,238,228,.72)!important}
+    @media(min-width:721px){html:not(.mobile-preview):not(.narrow-preview) body:has(.hero) .hero h1{font-size:clamp(2.9rem,5vw,4.4rem)!important}}
+    @media(min-width:721px){html:not(.mobile-preview):not(.narrow-preview) body:has(.hero) .hero .lead{font-size:1.25rem!important}}
+    @media(min-width:721px){html:not(.mobile-preview):not(.narrow-preview) body:has(.hero) .footer{transform:translateY(3px)!important}}
+    @media(min-width:721px){body:has(.hero) .shell{min-height:100vh;padding-bottom:0!important}body:has(.hero) main{min-height:0!important}body:has(.hero) .hero{min-height:calc(100vh - 190px)!important}}
+    @media(min-width:721px){.shell{padding-left:6.5vw!important;padding-right:6.5vw!important}.hero{padding-left:6.5vw!important;padding-right:6.5vw!important}}
+    @media(min-width:721px){header .home{margin-left:1.5vw!important}}
+    @media(min-width:721px){header nav>a,header nav .dropbtn{font-size:1.2rem!important}}
+    @media(min-width:721px){header .dropmenu a{font-size:1.2rem!important}}
+    @media(min-width:721px){body:not(:has(.hero)) header{padding-left:6.5vw!important;padding-right:6.5vw!important}body:not(:has(.hero)) .page{margin-left:1.5vw!important;margin-right:1.5vw!important}}
+    @media(min-width:721px){header .home{top:5px!important;transform:none!important}}
+    @media(min-width:721px){header .home .brand-name{top:10px!important;transform:translateY(27px)!important}}
+    html.ipad-landscape body:has(.hero) .footer{transform:translateY(-6px)!important}
+    html.ipad-landscape body:has(.hero) .shell{padding-bottom:16px!important}
+    @media(max-width:720px){body:has(.hero) .hero h1{position:relative!important;top:auto!important;margin-top:-10px!important;transform:none!important}}
+    @media(max-width:720px){html:not(.narrow-preview) body:has(.hero) .hero h1{margin-top:17px!important}}
+    @media(max-width:720px){html:not(.narrow-preview) body:has(.hero) .hero h1{padding-top:28px!important}}
+    @media(max-width:720px){body:has(.hero) .hero{margin-top:20px!important}body:has(.hero) .hero>div{width:100%!important;max-width:100%!important;margin:0!important;padding:18px 18px 20px!important;border-radius:14px!important;overflow:hidden}}
+    @media (prefers-contrast:more){body{--ink:#111a1a;--muted:#3f4c4c;--line:#81908e}.hero:before{background:linear-gradient(90deg,rgba(5,25,21,.52),rgba(5,25,21,.18) 72%)!important}.dropmenu{border-color:#31433f!important}}
+    @media (prefers-reduced-transparency:reduce){.dropmenu{background:#fbfaf7!important;backdrop-filter:none!important}}
+    /* Impeccable homepage motion: one slow, authored arrival for the scenic welcome. */
+    @keyframes welcome-heading-arrival{from{opacity:0;transform:translateY(-32px);filter:blur(4px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+    @keyframes welcome-copy-arrival{from{opacity:0;transform:translateY(-14px);filter:blur(2px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+    @keyframes welcome-scenic-breathe{0%,100%{background-position:center center}50%{background-position:51% 49%}}
+    body:has(.hero){animation:welcome-scenic-breathe 18s ease-in-out infinite!important}
+    body:has(.hero) .hero h1{animation:welcome-heading-arrival 1750ms cubic-bezier(.16,1,.3,1) both!important}
+    body:has(.hero) .hero .lead:first-of-type{animation:welcome-copy-arrival 1500ms cubic-bezier(.16,1,.3,1) 220ms both!important}
+    body:has(.hero) .hero .role-note{animation:welcome-copy-arrival 1500ms cubic-bezier(.16,1,.3,1) 400ms both!important}
+    @media(prefers-reduced-motion:reduce){body:has(.hero){animation:none!important}body:has(.hero) .hero h1,body:has(.hero) .hero .lead:first-of-type,body:has(.hero) .hero .role-note{animation:none!important}}
+    /* Direct selectors keep the entrance reliable in file:// previews as well as HTTP previews. */
+    .hero h1{animation:welcome-heading-arrival 1750ms cubic-bezier(.16,1,.3,1) both!important}
+    .hero .lead:first-of-type{animation:welcome-copy-arrival 1500ms cubic-bezier(.16,1,.3,1) 220ms both!important}
+    .hero .role-note{animation:welcome-copy-arrival 1500ms cubic-bezier(.16,1,.3,1) 400ms both!important}
+    @media(prefers-reduced-motion:reduce){.hero h1,.hero .lead:first-of-type,.hero .role-note{animation:none!important}}
+    /* Restore the confirmed slow, non-scaling welcome-page text entrance. */
+    @keyframes welcome-title-drop{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes welcome-copy-drop{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+    body:has(.hero) .hero h1{animation:welcome-title-drop 1450ms cubic-bezier(.22,.8,.28,1) both!important}
+    body:has(.hero) .hero .lead:first-of-type{animation:welcome-copy-drop 1450ms cubic-bezier(.22,.8,.28,1) 180ms both!important}
+    body:has(.hero) .hero .role-note{animation:welcome-copy-drop 1450ms cubic-bezier(.22,.8,.28,1) 320ms both!important}
+    @media(prefers-reduced-motion:reduce){body:has(.hero) .hero h1,body:has(.hero) .hero .lead:first-of-type,body:has(.hero) .hero .role-note{animation:none!important}}
+    /* Shared welcome motion: replayed after the route renders in every preview wrapper. */
+    @keyframes welcome-title-arrival-shared{from{opacity:0;transform:translateY(-22px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes welcome-copy-arrival-shared{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+    .hero h1.welcome-motion{animation:welcome-title-arrival-shared 1700ms cubic-bezier(.22,.8,.28,1) both!important}
+    .hero .lead.welcome-motion{animation:welcome-copy-arrival-shared 1550ms cubic-bezier(.22,.8,.28,1) both!important}
+    .hero .role-note.welcome-motion{animation:welcome-copy-arrival-shared 1550ms cubic-bezier(.22,.8,.28,1) 220ms both!important}
+    @media(prefers-reduced-motion:reduce){.hero h1.welcome-motion,.hero .lead.welcome-motion,.hero .role-note.welcome-motion{animation:none!important}}
+    /* Research uses an explicit toggle while retaining desktop hover as a convenience. */
+    .dropmenu{border-color:rgba(82,124,128,.28)!important;box-shadow:0 16px 35px rgba(38,51,45,.10)}
+    .dropbtn:focus-visible,.dropmenu a:focus-visible{outline:2px solid rgba(82,124,128,.72);outline-offset:3px}
+    /* Keep the shared detail modal above all page-level navigation and content. */
+    .modal-backdrop{z-index:1000!important}
+    .modal{position:relative;z-index:1001}
+    .page:has(.research-overview)>.links a{border-bottom:0!important;text-decoration:none!important}
+    .page:has(.research-overview)>.links a:hover{border-bottom-color:transparent!important;text-decoration:underline!important;text-decoration-color:var(--accent)!important;text-underline-offset:3px;color:var(--accent)!important;background:transparent!important}
+    .page:has(.research-overview)>.links a:focus-visible{border-bottom-color:transparent!important;text-decoration:underline!important;text-decoration-color:var(--accent)!important;text-underline-offset:3px;color:var(--accent)!important;outline:2px solid var(--accent);outline-offset:4px;background:transparent!important}
+    /* Final local QA corrections: quiet catalogue cards, consistent content links,
+       and no divider at the Chinese page's body transition. */
+    .clickable h2:after{content:none!important}
+    main a,main a:visited,.modal a,.modal a:visited{color:var(--accent)!important}
+    main a:hover,main a:focus-visible,.modal a:hover,.modal a:focus-visible{color:var(--accent)!important;text-decoration:underline;text-underline-offset:3px}
+    .zh-page{display:grid;gap:14px}
+    .zh-page .item{border-top:0!important}
+    .zh-page>.item{margin:0;background:var(--panel-green);padding:28px 30px;border-radius:16px!important}
+    .zh-page>.item:nth-of-type(2){background:var(--panel-green-soft)}
+    .zh-page>.item p:last-child{margin-bottom:0}
+    .zh-page>.zh-closing{padding-top:20px;padding-bottom:20px}
+    .zh-page h1.zh-heading,.zh-page .short-bio h2,.zh-page .zh-closing-heading{font-size:1.45rem;line-height:1.3;margin:0 0 20px;letter-spacing:normal}
+    .zh-page .zh-closing-heading{font-family:var(--display-font);font-weight:500;margin-bottom:8px;color:var(--ink)}
+    @media(max-width:720px){.zh-page>.item{padding:22px 20px}}
+    .about-page>.short-bio{margin-top:8px!important;background:rgba(255,255,255,.72)!important;border-radius:16px!important}
+    .about-page>.short-bio .short-bio-note{color:var(--muted);font-style:italic}
+    .contact-page-art{display:none}
+    @media(min-width:721px){.contact-page{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,35%);column-gap:clamp(52px,8vw,112px);align-items:start}.contact-page>*:not(.contact-page-art){grid-column:1}.contact-page>p{font-size:clamp(1.02rem,1.2vw,1.16rem);line-height:1.72;margin:0 0 32px}.contact-page>p strong{display:inline-block;font-size:1.03em;margin-bottom:7px}.contact-page>p a{display:inline-block;line-height:1.9}.contact-page-art{display:block;grid-column:2;grid-row:1 / span 5;margin-top:18px;overflow:hidden;border-radius:20px;box-shadow:0 16px 34px rgba(38,51,45,.12)}.contact-page-art img{display:block;width:100%;height:auto;max-height:650px;object-fit:contain;object-position:center center}}
+    @media(min-width:1000px){.contact-page{grid-template-columns:minmax(0,1fr) minmax(190px,30%)}.contact-page-art{max-width:85%;justify-self:end}}
+    html.ipad-landscape .contact-page{grid-template-columns:minmax(0,1fr) minmax(190px,29%)}
+    html.ipad-landscape .contact-page-art{max-width:85%;justify-self:end}
+    .modal{overflow-x:hidden;overflow-wrap:anywhere}
+    .modal *{max-width:100%;overflow-wrap:anywhere}
+    #modalBody{min-width:0}
+    .quiet-list{margin:4px 0 0;padding-left:1.15em}
+    .quiet-list li{padding-left:.16em;margin:0 0 4px}
+    .quiet-list li::marker{font-size:.62em;color:var(--muted)}
+    @media(max-width:340px){
+      body:has(.hero) .shell{display:flex!important;flex-direction:column!important;min-height:100vh!important;padding-bottom:40px!important}
+      body:has(.hero) main{flex:0 0 auto!important}
+      body:has(.hero) .hero{display:block!important;align-items:initial!important;min-height:0!important;height:auto!important;margin:0 -5vw!important;padding:48px 5vw 64px!important;overflow:visible!important}
+      body:has(.hero) .hero>div{transform:none!important;margin:0!important;padding:14px 16px 16px!important}
+      body:has(.hero) .hero h1{font-size:2.2rem!important;padding:16px 0 20px!important;margin:0 0 14px!important}
+      body:has(.hero) .hero .lead{font-size:.95rem!important;line-height:1.5!important;margin:0 0 10px!important}
+      body:has(.hero) .hero .role-note{margin-bottom:0!important}
+      body:has(.hero) .footer{margin-top:auto!important}
+    }
+    /* Keep real iOS Safari from autosizing the welcome copy or lifting the card into the navigation. */
+    @media(max-width:520px){body:has(.hero) .hero{margin-top:0!important}body:has(.hero) .hero>div{transform:none!important}}
+    /* Compact the welcome card only at intermediate tablet widths such as Split View. */
+    @media (min-width:521px) and (max-width:720px){body:has(.hero) .hero>div{padding:16px 20px 18px!important}body:has(.hero) .hero h1{font-size:clamp(2.8rem,7vw,3.5rem)!important;padding:22px 0 26px!important}body:has(.hero) .hero .lead{font-size:1.02rem!important;line-height:1.55!important}body:has(.hero) .hero .role-note{margin-top:8px!important}}
+    /* Give real phone layouts a little sky below the navigation, while keeping the welcome card lighter. */
+    @media(max-width:520px){body:has(.hero) .hero{padding-top:16px!important}body:has(.hero) .hero>div{padding-top:12px!important}body:has(.hero) .hero h1{font-size:clamp(2.55rem,11.5vw,2.65rem)!important;padding-top:4px!important;padding-bottom:18px!important;margin-top:0!important;margin-bottom:8px!important}body:has(.hero) .hero .lead{font-size:1.06rem!important;line-height:1.52!important;margin-top:0!important;margin-bottom:10px!important}body:has(.hero) .hero .role-note{font-size:.95rem!important;margin-top:6px!important}}
+    @media(max-width:340px){body:has(.hero) .hero h1{font-size:2rem!important;padding-top:8px!important;padding-bottom:16px!important;margin-bottom:10px!important}body:has(.hero) .hero .lead{font-size:.88rem!important;line-height:1.48!important;margin-bottom:8px!important}body:has(.hero) .hero .role-note{font-size:.86rem!important;margin-top:5px!important}}
+    /* Let the mobile navigation arrive gently with the page, without moving its layout. */
+    @keyframes mobile-nav-arrival{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:720px){body:not(:has(.hero)) header nav>a,body:not(:has(.hero)) header nav .dropbtn,body:has(.hero) header nav>a,body:has(.hero) header nav .dropbtn{animation:mobile-nav-arrival 700ms cubic-bezier(.22,.8,.28,1) both}header nav>a:nth-of-type(1){animation-delay:80ms}header nav>a:nth-of-type(2){animation-delay:140ms}header nav .dropbtn{animation-delay:200ms}header nav>a:nth-of-type(3){animation-delay:260ms}header nav>a:nth-of-type(4){animation-delay:320ms}header nav>a:nth-of-type(5){animation-delay:380ms}}
+    @media(prefers-reduced-motion:reduce){header nav>a,header nav .dropbtn{animation:none!important}}
+    /* Keep the mobile welcome copy visibly animated even when the route is rendered after load. */
+    @keyframes mobile-welcome-title{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes mobile-welcome-copy{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:720px){body:has(.hero) .hero h1{animation:mobile-welcome-title 1200ms cubic-bezier(.22,.8,.28,1) both!important}body:has(.hero) .hero .lead:first-of-type{animation:mobile-welcome-copy 1050ms cubic-bezier(.22,.8,.28,1) 180ms both!important}body:has(.hero) .hero .role-note{animation:mobile-welcome-copy 1050ms cubic-bezier(.22,.8,.28,1) 360ms both!important}}
+    @media(prefers-reduced-motion:reduce){body:has(.hero) .hero h1,body:has(.hero) .hero .lead:first-of-type,body:has(.hero) .hero .role-note{animation:none!important}}
+    /* Let the body background propagate to the root canvas on the homepage. */
+    html.homepage-state{background:transparent!important}
+    body.homepage-state{background-color:#263b35!important;background-image:url("/assets/img/hero/alpine-forest.jpg")!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;background-attachment:scroll!important}
+    body.homepage-state .hero{background:transparent!important}
+    body.homepage-state .hero h1{-webkit-text-size-adjust:none;text-size-adjust:none}
+    @media (min-width:341px) and (max-width:520px){body.homepage-state .hero{padding-top:28px!important}}
+
+    /* Post-Phase 4 refinement: modestly reduce only the Chinese introduction heading. */
+    @media(max-width:720px){.zh-page h1.zh-heading{font-size:1.45rem!important}}
+    .about-page>.eyebrow a{font-family:inherit!important;font-size:inherit!important;font-weight:inherit!important;line-height:inherit!important;letter-spacing:inherit!important;text-transform:inherit!important;text-decoration:none}
+    .about-page>.short-bio{background:#edf2ef99!important}
+    .about-page>.about-name{background:#edf2ef66!important}
+    .contact-page-art{position:relative;background:transparent}
+    .contact-page-art:before{content:"";position:absolute;inset:0;background:url("data:image/webp;base64,UklGRiIBAABXRUJQVlA4IBYBAAAwCgCdASpgAI4APpFIoEulpKMipNYIALASCWcA1VUALsAp5VaB7wyBNqbVOE7J6joYJxvo7Je6y0B2INzwUfPE478cfdYwwmgL7NA6RonoQqN65i9n/qjNLvAA/vWg/73LRSGKeXQD2qHSHFb9/qDQhUskBXdAWdw7sOEWiW56FbAi9owRr4OfDntvWdLd4oRCh/rRHwe0nPrNqp16imAs5gFkit4ZofX6wBX8OZYJrUu+LqlmevmPHt7Dr650NoHc8TjVw1dXqXWGPkXHG4IAqFXdyDFb9lVDDui40RHnXJq9bITxEq6qlp8gZjFSmABCuHPy0iPpIBIOjyTi3uCBS7yKfLyBs4aiGRJxB1DM6AhT5AAAAA==") center/cover no-repeat;filter:blur(1.5px);transform:scale(1.005);transform-origin:center;transition:opacity 240ms ease-out;}
+    .contact-page-art img{position:relative;z-index:1;opacity:0;filter:blur(1.5px);transform:scale(1.005);transition:opacity 240ms ease-out,filter 240ms ease-out,transform 240ms ease-out}
+    .contact-page-art img.contact-art-ready{opacity:1;filter:none;transform:none}
+    @media(prefers-reduced-motion:reduce){.contact-page-art:before{display:none}.contact-page-art img{opacity:1;filter:none;transform:none;transition:none}.contact-page-art img.contact-art-ready{animation:none}}
+    .zh-page>.lead{margin-bottom:8px!important}
+    .zh-page>.item>p:first-child{margin-top:0!important}
+   .book-meta b{color:var(--ink);font-size:inherit;letter-spacing:normal;text-transform:none;font-weight:700}
+    .publications-page .publication-topic-label{font:400 1.4rem/1.3 var(--display-font);color:var(--accent);letter-spacing:0}
+    @media(max-width:720px){.publications-page .publication-topic-label{font-size:1.15rem}}

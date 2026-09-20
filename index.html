@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" class="homepage-state">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="icon" href="/assets/icons/favicon-heart.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="/assets/icons/favicon-heart.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icons/favicon-heart.svg">
+  <title>Dr Xin Xu</title>
+  <meta name="description" content="Dr Xin Xu is a Senior Departmental Lecturer at the University of Oxford, researching tertiary education, research on research, and global higher education.">
+  <link rel="canonical" href="https://www.xin-xu.com/">
+  <link rel="preload" as="image" href="/assets/img/hero/alpine-forest.jpg">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script>
+  (() => {
+    const routes = {
+      "#/": "/",
+      "#/about": "/about/",
+      "#/research": "/research/",
+      "#/books": "/books/",
+      "#/publications": "/publications/",
+      "#/projects": "/projects/",
+      "#/engagement": "/engagement/",
+      "#/teaching": "/teaching/",
+      "#/updates": "/updates/",
+      "#/contact": "/contact/",
+      "#/zh": "/chinese/",
+      "#/accessibility": "/accessibility/",
+      "#/privacy": "/privacy/"
+    };
+    const legacyRoute = location.hash.split('?')[0];
+    if (routes[legacyRoute]) {
+      const hashQuery = location.hash.includes('?') ? '?' + location.hash.split('?').slice(1).join('?') : '';
+      location.replace(routes[legacyRoute] + hashQuery);
+    }
+  })();
+  </script>
+  <script>const previewMode=new URLSearchParams(location.search).get('preview');document.documentElement.classList.toggle('mobile-preview',previewMode==='mobile-menu-fix');document.documentElement.classList.toggle('narrow-preview',previewMode==='narrow-phone');document.documentElement.classList.toggle('ipad-landscape',previewMode==='ipad-landscape');</script>
+</head>
+<body class="homepage-state" data-route="home">
+  <div class="shell">
+    <header>
+      <a class="home" href="/" aria-label="Return to front page"><img class="brand-name" src="/assets/img/xin-xu-wordmark.png" alt="Xin Xu"></a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a><a href="/about/">About</a>
+        <div class="drop"><button class="dropbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="research-menu">Research⌄</button><div class="dropmenu" id="research-menu"><a href="/research/">Overview</a><a href="/books/">Books</a><a href="/publications/">Publications</a><a href="/projects/">Projects</a><a href="/engagement/">Engagement</a></div></div>
+        <a href="/teaching/">Teaching</a><span class="mobile-nav-break" aria-hidden="true"></span><a href="/updates/">Updates</a><a href="/contact/">Contact</a><a href="/chinese/">中文</a>
+      </nav>
+    </header>
+    <main id="app"><section class="hero"><div><h1>Hi, I’m <span class="name-accent">Xin Xu.</span></h1><p class="lead">I am a scholar of tertiary education and research, and I work at the University of Oxford as a Senior Lecturer.</p><p class="lead role-note">Welcome to my space!</p></div></section></main>
+    <div class="footer"><a href="/accessibility/">Accessibility</a><a href="/privacy/">Privacy</a><span>© 2026 Xin Xu</span></div>
+  </div>
+  <div class="modal-backdrop" id="modalBackdrop" role="presentation"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close details">×</button><div class="eyebrow" id="modalType">Details</div><h2 id="modalTitle"></h2><div id="modalBody"></div></section></div>
+  <script id="page-data" type="application/json">{}</script>
+  <script src="/assets/site.js"></script>
+</body>
+</html>
